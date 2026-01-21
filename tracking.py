@@ -78,7 +78,7 @@ while True:
         out.write(tracked_frame)
 
         cv2.imshow("Step 3- YOLO tracking", tracked_frame)
-        if cv2.waitkey(1) & 0xFF == ord("q"):
+        if cv2.waitKey(1) & 0xFF == ord("q"):
             break
         if frame_count % 30 == 0:
             print(f"Processed {frame_count} frames...")
