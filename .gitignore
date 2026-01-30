@@ -1,38 +1,61 @@
+# ==============================
+# Python virtual environment
+# ==============================
 .venv/
 venv/
 env/
 ENV/
 
-
+# ==============================
+# Python cache / compiled files
+# ==============================
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-
+# ==============================
+# VS Code / Editor settings
+# ==============================
 .vscode/
 
-
+# ==============================
+# OS junk files
+# ==============================
 .DS_Store
 Thumbs.db
 
-
+# ==============================
+# YOLO / Ultralytics
+# ==============================
+runs/
 *.pt
 
-
+# ==============================
+# Runtime-generated data
+# ==============================
+backend/uploads/
 *.mp4
 *.avi
 *.mov
 *.mkv
 
-
-detections_log.json
+# ==============================
+# Generated logs & outputs
+# ==============================
 tracking_log.json
-detection.json
-output*.mp4
+events.json
+summary.txt
+output_tracked.mp4
 
-
-runs/
-
-
+# ==============================
+# Environment variables
+# ==============================
 .env
+
+# ==============================
+# Node / React (future frontend)
+# ==============================
+node_modules/
+dist/
+build/
