@@ -45,19 +45,22 @@ An end-to-end **Machine Learning + Web Application** that analyzes CCTV footage 
 
 ## Architecture Overview
 
-Video Input
+Video Input (CCTV / Uploaded File)
 ↓
-YOLO Detection + Tracking
+YOLO Object Detection + ByteTrack Tracking
 ↓
-Tracking Logs (JSON)
+Frame-Level Tracking Logs (JSON)
 ↓
-Event Inference (Entry / Exit / Movement)
+Event Inference Layer
+• Entry Detection
+• Exit Detection
+• Movement Detection
 ↓
-Human-Readable Summary
+Human-Readable Summary Generation
 ↓
-FastAPI Backend (REST API)
+FastAPI Backend (REST APIs)
 ↓
-Frontend (React – Planned)
+Frontend Client (React – Planned)
 
 ### Project overview
 
