@@ -44,3 +44,35 @@ An end-to-end **Machine Learning + Web Application** that analyzes CCTV footage 
 ---
 
 ## Architecture Overview
+
+Video Input
+↓
+YOLO Detection + Tracking
+↓
+Tracking Logs (JSON)
+↓
+Event Inference (Entry / Exit / Movement)
+↓
+Human-Readable Summary
+↓
+FastAPI Backend (REST API)
+↓
+Frontend (React – Planned)
+
+### Project overview
+
+smart-cctv-agent/
+│
+├── backend/
+│ ├── main.py # FastAPI backend
+│ ├── pipeline.py # ML pipeline orchestrator
+│ ├── tracking_module.py # Detection + tracking
+│ ├── events_module.py # Behavioral inference
+│ ├── summary_module.py # Summary generation
+│ ├── uploads/ # Runtime data (gitignored)
+│ └── requirements.txt
+│
+├── legacy/ # Early experimental scripts
+│
+├── .gitignore
+└── README.md
