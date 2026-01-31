@@ -31,7 +31,7 @@ def generate_summary(
 
         obj_class = evs[0].get("class", "unknown")
 
-        lines.append(f"Objecct: {obj_class} (ID{track_id})")
+        lines.append(f"Object: {obj_class} (ID{track_id})")
 
         for e in evs:
             t = format_time(e["time_sec"])

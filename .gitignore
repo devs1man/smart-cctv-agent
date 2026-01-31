@@ -54,8 +54,9 @@ output_tracked.mp4
 .env
 
 # ==============================
-# Node / React (future frontend)
+# Node / React
 # ==============================
 node_modules/
 dist/
 build/
+.vite/
