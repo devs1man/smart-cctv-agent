@@ -64,19 +64,21 @@ Frontend Client (React – Planned)
 
 ### Project overview
 
+## 📁 Project Structure
+
 smart-cctv-agent/
-│
 ├── backend/
-│ ├── main.py # FastAPI backend
+│ ├── main.py # FastAPI application entry point
 │ ├── pipeline.py # ML pipeline orchestrator
-│ ├── tracking_module.py # Detection + tracking
-│ ├── events_module.py # Behavioral inference
-│ ├── summary_module.py # Summary generation
-│ ├── uploads/ # Runtime data (gitignored)
-│ └── requirements.txt
+│ ├── tracking_module.py # YOLO detection + ByteTrack tracking
+│ ├── events_module.py # Behavioral event inference
+│ ├── summary_module.py # Human-readable summary generation
+│ ├── uploads/ # Runtime video data (gitignored)
+│ └── requirements.txt # Backend dependencies
+│
+├── frontend/ # React + Tailwind frontend
 │
 ├── legacy/ # Early experimental scripts
-│
 ├── .gitignore
 └── README.md
 
