@@ -79,3 +79,26 @@ smart-cctv-agent/
 │
 ├── .gitignore
 └── README.md
+
+## Live Demo
+
+**Frontend (UI):**  
+🔗 https://smart-cctv-agent.vercel.app
+
+> **Note:**  
+> The backend performs real-time video processing using YOLO and runs locally due to compute limitations on free cloud tiers.  
+> To experience full functionality, please run the backend locally and then use the deployed frontend UI.
+
+## Run Backend Locally
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+
+```
+
+### Deployment Notes
+
+Due to the computational cost of video inference and object tracking, the backend is designed to run locally. The system architecture supports cloud deployment on paid tiers or GPU-enabled services.
