@@ -45,42 +45,31 @@ An end-to-end **Machine Learning + Web Application** that analyzes CCTV footage 
 
 ## Architecture Overview
 
-Video Input (CCTV / Uploaded File)
-↓
-YOLO Object Detection + ByteTrack Tracking
-↓
-Frame-Level Tracking Logs (JSON)
-↓
-Event Inference Layer
-• Entry Detection
-• Exit Detection
-• Movement Detection
-↓
-Human-Readable Summary Generation
-↓
-FastAPI Backend (REST APIs)
-↓
-Frontend Client (React – Planned)
+1. **Video Input**
+   - CCTV footage or user-uploaded video file
 
-### Project overview
+2. **Object Detection**
+   - YOLO-based object detection on each frame
 
-## 📁 Project Structure
+3. **Object Tracking**
+   - ByteTrack for assigning persistent IDs across frames
 
-smart-cctv-agent/
-├── backend/
-│ ├── main.py # FastAPI application entry point
-│ ├── pipeline.py # ML pipeline orchestrator
-│ ├── tracking_module.py # YOLO detection + ByteTrack tracking
-│ ├── events_module.py # Behavioral event inference
-│ ├── summary_module.py # Human-readable summary generation
-│ ├── uploads/ # Runtime video data (gitignored)
-│ └── requirements.txt # Backend dependencies
-│
-├── frontend/ # React + Tailwind frontend
-│
-├── legacy/ # Early experimental scripts
-├── .gitignore
-└── README.md
+4. **Frame-Level Logging**
+   - Per-frame detection and tracking data stored as structured JSON
+
+5. **Event Inference Layer**
+   - Entry detection
+   - Exit detection
+   - Movement detection based on spatial displacement
+
+6. **Summary Generation**
+   - Converts low-level events into human-readable descriptions
+
+7. **Backend API**
+   - FastAPI-based REST APIs for upload, processing, and results
+
+8. **Frontend Client**
+   - React + Tailwind UI for interaction and visualization
 
 ## Live Demo
 
